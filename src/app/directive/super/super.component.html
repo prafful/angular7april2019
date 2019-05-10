@@ -1,0 +1,63 @@
+<div>
+  Demo of *ngFor directive:
+  <ol>
+    <li *ngFor="let f of friends; let counter = index  ">{{ f }} is at {{ counter }} position</li>
+  </ol>
+
+<ol>
+  <li *ngFor="let loc of locations">
+    {{ loc.city }} with {{ loc.code }}
+  </li>
+</ol>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let loc of locations">
+      <td>{{ loc.city }}</td>
+      <td>{{ loc.code }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<br>
+<div>
+  Demo of *ngIf directive:
+  <button *ngIf="display">Click Me to Hide Me {{ display }}</button>
+  <br>
+  Mini demo:
+  <button (click)="playHideAndSeek()"> Toggle Display of DIV </button>
+  <div class="hidenseek" *ngIf="display"> Hide n Seek</div>
+  <br>
+  Demo of *ngIf with else criteria:
+  <button (click)="displayAnyOne()">Display Any One</button>
+  <div class="one" *ngIf="checkOne; else mytemplate">
+    Aqua
+  </div>
+  <ng-template  #mytemplate >
+    <div class="two">
+        Green
+    </div>
+  </ng-template>
+
+  <ng-template  #bluetemplate >
+      <div class="three">
+          Blue
+      </div>
+    </ng-template>
+</div>
+<div>
+  Demo of ngSwitch directive:
+  <div [ngSwitch]="name">
+    <span *ngSwitchCase="'prafful'">PD</span>
+    <span *ngSwitchCase="'manoj'">MB</span>
+    <span *ngSwitchCase="'adi'">AD</span>
+    <span *ngSwitchDefault>OBB</span>
+  </div>
+
+</div>

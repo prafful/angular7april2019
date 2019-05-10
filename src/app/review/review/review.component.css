@@ -1,0 +1,26 @@
+.reviewcontainer{
+
+    background-color: aquamarine;
+    height: 80px;
+ 
+}
+
+.title{
+    background-color: blue;
+}
+
+
+.thumbnail{
+    background-color: bisque;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+}
+
+.description{
+    background-color: burlywood;
+    float:right;
+   width: 80%;
+   margin-right: 5%;
+   height: 60px;
+}
