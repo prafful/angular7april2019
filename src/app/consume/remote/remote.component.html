@@ -1,3 +1,54 @@
-<p>
-  remote works!
-</p>
+<div>
+All friends:
+<div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let frn of friends ">
+        <td>{{ frn.id }}</td>
+        <td> {{ frn.name }} </td>
+        <td> {{ frn.years }}</td>
+        <td>
+          <button (click)="deleteFriend(frn.id)">Delete</button>
+        </td>
+        <td>
+          <button>Update</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+
+</div>
+<div>
+  <button (click)="displayAddFriendForm()" [disabled]="displayForm">Add New Friend</button>
+</div>
+<br>
+<div *ngIf="displayForm">
+  <fieldset>
+    <legend>Add New Friend</legend>
+
+    <form #addFriendForm="ngForm" (ngSubmit)="saveFriend(addFriendForm.value)">
+      <label>Name: </label>
+      <input type="text" name="name" [(ngModel)]="name">
+      <br>
+      <label>Years: </label>
+      <input type="number" name="years" [(ngModel)]="years">
+      <br>
+      <button type="submit">Add Friend</button>
+    </form>  
+  </fieldset>
+<br>
+ 
+</div>
+
+<div>
+    Message: {{ message }}
+</div>
