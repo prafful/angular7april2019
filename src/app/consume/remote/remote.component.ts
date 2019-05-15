@@ -9,8 +9,10 @@ import { RemoteService } from 'src/app/services/remote.service';
 export class RemoteComponent implements OnInit {
 
   friends:any = []
-
+  buttonLabel = ""
   message = ""
+  name =""
+  years=0
 
   constructor(private remote: RemoteService) { }
 
@@ -31,6 +33,7 @@ export class RemoteComponent implements OnInit {
   }
 
   displayAddFriendForm = function(){
+    this.buttonLabel = "Add Friend"
     this.displayForm = true
   }
 
@@ -54,6 +57,17 @@ export class RemoteComponent implements OnInit {
     this.remote.deleteFriend(cf).subscribe((data)=>{
       this.getAllFriends()
       this.message = "Friend deleted..."
+    })
+  }
+
+
+  updateFriend = function(cf){
+    this.displayForm = true
+    this.buttonLabel = "Update Friend"
+    this.remote.getFriendById(cf).subscribe((data)=>{
+      console.log(data)
+      this.name = data.name
+      this.years = data.years
     })
   }
 

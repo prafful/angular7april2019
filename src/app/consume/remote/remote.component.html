@@ -18,7 +18,7 @@ All friends:
           <button (click)="deleteFriend(frn.id)">Delete</button>
         </td>
         <td>
-          <button>Update</button>
+          <button (click)="updateFriend(frn.id)">Update</button>
         </td>
       </tr>
     </tbody>
@@ -42,7 +42,7 @@ All friends:
       <label>Years: </label>
       <input type="number" name="years" [(ngModel)]="years">
       <br>
-      <button type="submit">Add Friend</button>
+      <button type="submit">{{ buttonLabel }}</button>
     </form>  
   </fieldset>
 <br>
