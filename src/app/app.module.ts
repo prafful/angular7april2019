@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +17,14 @@ import { NotfoundComponent } from './notfound/notfound/notfound.component';
 import { ReviewComponent } from './review/review/review.component';
 import { DummyComponent } from './dummy/dummy/dummy.component';
 import { TemplateformComponent } from './forms/templateform/templateform.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { TaskComponent } from './todo/task/task.component';
+import { InbuiltComponent } from './pipe/inbuilt/inbuilt.component';
+import { SortstringPipe } from './custompipe/sortstring.pipe';
+import { SortnumPipe } from './custompipe/sortnum.pipe';
+import { ConsumeserviceComponent } from './consume/consumeservice/consumeservice.component';
+import { Consumeservice2Component } from './consume/consumeservice2/consumeservice2.component';
+import { RemoteComponent } from './consume/remote/remote.component';
 
 
 @NgModule(
@@ -29,10 +39,16 @@ import { TemplateformComponent } from './forms/templateform/templateform.compone
                     NotfoundComponent, 
                     ReviewComponent, 
                     DummyComponent, 
-                    TemplateformComponent],
+                    TemplateformComponent, 
+                    ReactiveComponent, 
+                    TaskComponent,
+                    InbuiltComponent, 
+                    SortstringPipe, SortnumPipe, ConsumeserviceComponent, Consumeservice2Component, RemoteComponent],
     imports: [ BrowserModule, 
               AppRoutingModule,
-              FormsModule ],
+              FormsModule,
+              ReactiveFormsModule,
+              HttpClientModule ],
     providers: [],
     bootstrap: [RootComponent]
   }

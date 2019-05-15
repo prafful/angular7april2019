@@ -9,6 +9,12 @@ import { MotherComponent } from './nuclearfamily/mother/mother.component';
 import { DaughterComponent } from './nuclearfamily/daughter/daughter.component';
 import { SonComponent } from './nuclearfamily/son/son.component';
 import { TemplateformComponent } from './forms/templateform/templateform.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { TaskComponent } from './todo/task/task.component';
+import { InbuiltComponent } from './pipe/inbuilt/inbuilt.component';
+import { ConsumeserviceComponent } from './consume/consumeservice/consumeservice.component';
+import { Consumeservice2Component } from './consume/consumeservice2/consumeservice2.component';
+import { RemoteComponent } from './consume/remote/remote.component';
 
 const routes: Routes = [ 
   {
@@ -55,6 +61,30 @@ const routes: Routes = [
 {
   path:'template',
   component:TemplateformComponent
+},
+{
+  path:'reactive',
+  component:ReactiveComponent
+},
+{
+  path:'todo',
+  component:TaskComponent
+},
+{
+  path:'pipe',
+  component:InbuiltComponent
+},
+{
+  path:'consume1',
+  component:ConsumeserviceComponent
+},
+{
+  path:'consume2',
+  component:Consumeservice2Component
+},
+{
+  path:'remote',
+  component:RemoteComponent
 },
 {
   path:'**',
