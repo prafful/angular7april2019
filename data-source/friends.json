@@ -1,0 +1,19 @@
+{
+    "friends":[
+        {
+            "id":1,
+            "name":"obb",
+            "years":12
+        },
+        {
+            "id":2,
+            "name":"owioh",
+            "years":12
+        },
+        {
+            "id":3,
+            "name":"adi",
+            "years":7
+        }
+    ]
+}
