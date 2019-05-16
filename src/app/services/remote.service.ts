@@ -24,5 +24,9 @@ export class RemoteService {
     return this.http.get("http://localhost:3000/friends/"+id)
   }
 
+  postFriend(updatedFriend){
+    return this.http.put("http://localhost:3000/friends/"+updatedFriend.id, updatedFriend)
+  }
+
 
 }

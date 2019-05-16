@@ -49,6 +49,28 @@ All friends:
  
 </div>
 
+
+<div *ngIf="displayUpdateForm">
+  <fieldset>
+    <legend>Update Friend</legend>
+
+    <form #updateFriendForm="ngForm" (ngSubmit)="updateFriendNow(updateFriendForm.value)">
+      <label>Id: </label>
+      <input type="number" name="id" [(ngModel)]="id" readonly>
+      <br>
+      <label>Name: </label>
+      <input type="text" name="name" [(ngModel)]="name">
+      <br>
+      <label>Years: </label>
+      <input type="number" name="years" [(ngModel)]="years">
+      <br>
+      <button type="submit">{{ buttonLabel }}</button>
+    </form>  
+  </fieldset>
+<br>
+ 
+</div>
+
 <div>
     Message: {{ message }}
 </div>

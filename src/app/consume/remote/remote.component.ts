@@ -11,12 +11,14 @@ export class RemoteComponent implements OnInit {
   friends:any = []
   buttonLabel = ""
   message = ""
+  id=0
   name =""
   years=0
 
   constructor(private remote: RemoteService) { }
 
   displayForm:boolean = false
+  displayUpdateForm:boolean = false
 
   ngOnInit() {
     this.getAllFriends()
@@ -39,7 +41,8 @@ export class RemoteComponent implements OnInit {
 
   saveFriend = function(frn){
     console.log(frn)
-
+    console.log(frn.id)
+    //Object.assign
     this.remote.addFriend(frn).subscribe((data)=>{
       console.log("add friend success...")
       this.message = "Friend added..."
@@ -62,13 +65,25 @@ export class RemoteComponent implements OnInit {
 
 
   updateFriend = function(cf){
-    this.displayForm = true
+    this.displayUpdateForm = true
     this.buttonLabel = "Update Friend"
     this.remote.getFriendById(cf).subscribe((data)=>{
       console.log(data)
+      this.id=data.id
       this.name = data.name
       this.years = data.years
+      //this.id = data.id
     })
+  }
+
+  updateFriendNow = function(updatedFriend){
+
+    this.remote.postFriend(updatedFriend).subscribe((data)=>{
+      this.displayUpdateForm = false
+      this.getAllFriends()
+      this.message = "Friend updated..."
+    })
+
   }
 
 }
