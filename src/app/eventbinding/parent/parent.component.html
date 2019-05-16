@@ -1,0 +1,12 @@
+<div class="parent">
+  Parent Component:
+  <br>
+  Name: {{ name }}
+
+</div>
+<br>
+<div class="child">
+  Child Component:
+  <app-child [sendName]="name" (nameUpdated)="getNameUpdate($event)"></app-child>
+
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RemoteService } from 'src/app/services/remote.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-remote',
@@ -15,7 +16,7 @@ export class RemoteComponent implements OnInit {
   name =""
   years=0
 
-  constructor(private remote: RemoteService) { }
+  constructor(private remote: RemoteService, private router:Router) { }
 
   displayForm:boolean = false
   displayUpdateForm:boolean = false
@@ -25,12 +26,19 @@ export class RemoteComponent implements OnInit {
   }
 
   getAllFriends = function(){
+    //this.remote.getRemoteUsers().subscribe((response)=>{}, (error)=>{})
+    //this.remote.getRemoteUsers().subscribe(function(response){}, function(error){})
     this.remote.getRemoteUsers().subscribe((data)=>{
       console.log("received from rest api")
       console.log(data)
       this.friends = data
       console.log("assigned to users")
       console.log(this.friends)
+    },
+    (error)=>{
+      this.message = "Error..." + JSON.stringify(error)
+      console.log("Error")
+      console.log(error)
     })
   }
 
@@ -48,6 +56,11 @@ export class RemoteComponent implements OnInit {
       this.message = "Friend added..."
       this.getAllFriends()
       this.displayForm = false
+    },
+    (error)=>{
+      this.message = "Error..." + JSON.stringify(error)
+      console.log("Error")
+      console.log(error)
     })
 
     //this.getAllFriends()
@@ -60,6 +73,11 @@ export class RemoteComponent implements OnInit {
     this.remote.deleteFriend(cf).subscribe((data)=>{
       this.getAllFriends()
       this.message = "Friend deleted..."
+    },
+    (error)=>{
+      this.message = "Error..." + JSON.stringify(error)
+      console.log("Error")
+      console.log(error)
     })
   }
 
@@ -73,6 +91,11 @@ export class RemoteComponent implements OnInit {
       this.name = data.name
       this.years = data.years
       //this.id = data.id
+    },
+    (error)=>{
+      this.message = "Error..." + JSON.stringify(error)
+      console.log("Error")
+      console.log(error)
     })
   }
 
@@ -82,8 +105,18 @@ export class RemoteComponent implements OnInit {
       this.displayUpdateForm = false
       this.getAllFriends()
       this.message = "Friend updated..."
+    },
+    (error)=>{
+      this.message = "Error..." + JSON.stringify(error)
+      console.log("Error")
+      console.log(error)
     })
+  }
 
+  updateFriendInSPA = function(id){
+    this.router.navigate(["/updatefriend", id])
+    //it will look for the fiollowing path
+    //       /updatefriend/1
   }
 
 }

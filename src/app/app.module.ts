@@ -25,6 +25,9 @@ import { SortnumPipe } from './custompipe/sortnum.pipe';
 import { ConsumeserviceComponent } from './consume/consumeservice/consumeservice.component';
 import { Consumeservice2Component } from './consume/consumeservice2/consumeservice2.component';
 import { RemoteComponent } from './consume/remote/remote.component';
+import { UpdateFriendComponent } from './consume/update-friend/update-friend.component';
+import { ParentComponent } from './eventbinding/parent/parent.component';
+import { ChildComponent } from './eventbinding/child/child.component';
 
 
 @NgModule(
@@ -43,7 +46,7 @@ import { RemoteComponent } from './consume/remote/remote.component';
                     ReactiveComponent, 
                     TaskComponent,
                     InbuiltComponent, 
-                    SortstringPipe, SortnumPipe, ConsumeserviceComponent, Consumeservice2Component, RemoteComponent],
+                    SortstringPipe, SortnumPipe, ConsumeserviceComponent, Consumeservice2Component, RemoteComponent, UpdateFriendComponent, ParentComponent, ChildComponent],
     imports: [ BrowserModule, 
               AppRoutingModule,
               FormsModule,

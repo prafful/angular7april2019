@@ -1,0 +1,9 @@
+<div>
+  Received Name: {{ sendName }}
+  <br>
+  Update Name: <input type="text" [(ngModel)]="sendName">
+  <br>
+  Updated Name: {{ sendName }}
+  <br>
+  <button (click)="updateName()">Update Name</button>
+</div>

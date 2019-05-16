@@ -15,6 +15,8 @@ import { InbuiltComponent } from './pipe/inbuilt/inbuilt.component';
 import { ConsumeserviceComponent } from './consume/consumeservice/consumeservice.component';
 import { Consumeservice2Component } from './consume/consumeservice2/consumeservice2.component';
 import { RemoteComponent } from './consume/remote/remote.component';
+import { UpdateFriendComponent } from './consume/update-friend/update-friend.component';
+import { ParentComponent } from './eventbinding/parent/parent.component';
 
 const routes: Routes = [ 
   {
@@ -85,6 +87,14 @@ const routes: Routes = [
 {
   path:'remote',
   component:RemoteComponent
+},
+{
+  path:'updatefriend/:myid',
+  component:UpdateFriendComponent
+},
+{
+  path:'eventbinding',
+  component:ParentComponent
 },
 {
   path:'**',
