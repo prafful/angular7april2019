@@ -17,6 +17,7 @@ import { Consumeservice2Component } from './consume/consumeservice2/consumeservi
 import { RemoteComponent } from './consume/remote/remote.component';
 import { UpdateFriendComponent } from './consume/update-friend/update-friend.component';
 import { ParentComponent } from './eventbinding/parent/parent.component';
+import { AnimateComponent } from './animation/animate/animate.component';
 
 const routes: Routes = [ 
   {
@@ -95,6 +96,10 @@ const routes: Routes = [
 {
   path:'eventbinding',
   component:ParentComponent
+},
+{
+  path:'animate',
+  component:AnimateComponent
 },
 {
   path:'**',
