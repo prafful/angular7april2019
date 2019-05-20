@@ -30,6 +30,15 @@ import { UpdateFriendComponent } from './consume/update-friend/update-friend.com
 import { ParentComponent } from './eventbinding/parent/parent.component';
 import { ChildComponent } from './eventbinding/child/child.component';
 import { AnimateComponent } from './animation/animate/animate.component';
+import { Delete1Component } from './delete/delete1/delete1.component';
+import { Delete2Component } from './delete/delete2/delete2.component';
+import { Delete3Component } from './delete/delete3/delete3.component';
+import { Delete4Component } from './delete/delete4/delete4.component';
+import { Delete5Component } from './delete/delete5/delete5.component';
+import { Delete6Component } from './delete/notinfolder/delete6.component';
+import { Delete7Component } from './delete/notinfolder/delete7.component';
+import { Delete8Component } from './delete/notinfolder/delete8.component';
+import { SampleComponent } from './bootstrap/sample/sample.component';
 
 
 @NgModule(
@@ -56,7 +65,7 @@ import { AnimateComponent } from './animation/animate/animate.component';
                     UpdateFriendComponent, 
                     ParentComponent, 
                     ChildComponent, 
-                    AnimateComponent],
+                    AnimateComponent, Delete1Component, Delete2Component, Delete3Component, Delete4Component, Delete5Component, Delete6Component, Delete7Component, Delete8Component, SampleComponent],
     imports: [ BrowserModule, 
               AppRoutingModule,
               FormsModule,

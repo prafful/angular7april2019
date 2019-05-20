@@ -1,24 +1,81 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="container-fluid">
+<div style="text-align:center" >
   <h1>
     Welcome to {{ title }}!
   </h1>
   <h2>{{session}}</h2>
-  
+  <button type="button" class="btn btn-primary">Primary</button>
 </div>
 Single Page Application
 <br>
-<a routerLink="family">Family</a> &nbsp;
-<a routerLink="directive">Directive</a> &nbsp;
-<a routerLink="review">RC</a> &nbsp;
-<a routerLink="template">Template Form</a> &nbsp;
-<a routerLink="reactive">Reactive Form</a> &nbsp;
-<a routerLink="todo">Task Manager</a> &nbsp;
-<a routerLink="pipe">Pipe</a> &nbsp;
-<a routerLink="consume1">Consume1</a> &nbsp;
-<a routerLink="consume2">Consume2</a> &nbsp;
-<a routerLink="remote">Consume Rest API</a> &nbsp;
-<a routerLink="eventbinding">Event Binding</a> &nbsp;
-<a routerLink="animate">Animation</a> &nbsp;
-<br>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="family">Family <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="directive">Directive</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Forms
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="template">Template Forms</a>
+          <a class="dropdown-item" routerLink="reactive">Reactive Forms</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="todo">ToDo App</a>
+          <a class="dropdown-item" routerLink="review">Review</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="pipe">Pipe</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Services & HTTP
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="consume1">Consume 1 Service</a>
+          <a class="dropdown-item" routerLink="consume2">Consume 1 Service</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="remote">Consume REST API</a>
+         
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="eventbinding">Event Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="animate">Animation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="bootstrap">Bootstrap</a>
+      </li>
+
+    
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
 <router-outlet></router-outlet>
+
+
+</div>

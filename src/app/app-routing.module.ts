@@ -18,6 +18,7 @@ import { RemoteComponent } from './consume/remote/remote.component';
 import { UpdateFriendComponent } from './consume/update-friend/update-friend.component';
 import { ParentComponent } from './eventbinding/parent/parent.component';
 import { AnimateComponent } from './animation/animate/animate.component';
+import { SampleComponent } from './bootstrap/sample/sample.component';
 
 const routes: Routes = [ 
   {
@@ -100,6 +101,10 @@ const routes: Routes = [
 {
   path:'animate',
   component:AnimateComponent
+},
+{
+  path:'bootstrap',
+  component:SampleComponent
 },
 {
   path:'**',
