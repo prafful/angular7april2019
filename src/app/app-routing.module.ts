@@ -19,6 +19,7 @@ import { UpdateFriendComponent } from './consume/update-friend/update-friend.com
 import { ParentComponent } from './eventbinding/parent/parent.component';
 import { AnimateComponent } from './animation/animate/animate.component';
 import { SampleComponent } from './bootstrap/sample/sample.component';
+//import { LazyComponentComponent } from './lazy/lazy-component/lazy-component.component';
 
 const routes: Routes = [ 
   {
@@ -105,6 +106,10 @@ const routes: Routes = [
 {
   path:'bootstrap',
   component:SampleComponent
+},
+{
+  path:'lazy',
+  loadChildren:'./lazy/lazy-module.module#LazyModuleModule'
 },
 {
   path:'**',

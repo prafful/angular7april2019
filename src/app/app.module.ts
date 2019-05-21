@@ -39,6 +39,7 @@ import { Delete6Component } from './delete/notinfolder/delete6.component';
 import { Delete7Component } from './delete/notinfolder/delete7.component';
 import { Delete8Component } from './delete/notinfolder/delete8.component';
 import { SampleComponent } from './bootstrap/sample/sample.component';
+//import { LazyComponentComponent } from './lazy/lazy-component/lazy-component.component';
 
 
 @NgModule(
@@ -65,7 +66,18 @@ import { SampleComponent } from './bootstrap/sample/sample.component';
                     UpdateFriendComponent, 
                     ParentComponent, 
                     ChildComponent, 
-                    AnimateComponent, Delete1Component, Delete2Component, Delete3Component, Delete4Component, Delete5Component, Delete6Component, Delete7Component, Delete8Component, SampleComponent],
+                    AnimateComponent, 
+                    Delete1Component, 
+                    Delete2Component, 
+                    Delete3Component, 
+                    Delete4Component,
+                     Delete5Component, 
+                     Delete6Component, 
+                     Delete7Component, 
+                     Delete8Component, 
+                     SampleComponent
+                     //LazyComponentComponent
+                    ],
     imports: [ BrowserModule, 
               AppRoutingModule,
               FormsModule,
